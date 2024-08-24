@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>API-test</title>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://192.168.99.5:8080/api.html',true);
+        xhr.send();
+        function change(){
+            if(xhr.readyState==4 && xhr.status==200){
+                alert(xhr.responseText);
+            }
+        }
+    </script>
+</head>
+<body>
+<input  id="button" type="button" value="测试" onclick="change();">
+</body>

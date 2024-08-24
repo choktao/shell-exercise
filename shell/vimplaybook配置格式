@@ -1,0 +1,3 @@
+set ai ts=2 et cursorcolumn cursorline
+autocmd FileType yaml setlocal ai nu et ts=2 sw=2
+

@@ -1,0 +1,8 @@
+ - zabbix-server-mysql
+          - zabbix-web-mysql
+          - zabbix-nginx-conf
+          - zabbix-sql-scripts
+          - zabbix-selinux-policy
+          - zabbix-agent
+          - mysql-server
+          - langpacks-zh_CN
