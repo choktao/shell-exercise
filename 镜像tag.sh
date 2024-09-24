@@ -1,0 +1,8 @@
+#!/bin/bash
+docker images|while read i t _;do
+    [[ "${t}" == "TAG" ]] && continue
+    [[ "${i}" =~ ^"harbor:443/".+ ]] && continue
+    docker tag ${i}:${t} harbor:443/k8s/${i##*/}:${t}
+    docker push harbor:443/k8s/${i##*/}:${t}
+    docker rmi ${i}:${t} harbor:443/k8s/${i##*/}:${t}
+done
